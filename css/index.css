@@ -427,6 +427,53 @@ ul {
 	.main-content .middle-img{
 		width: 100%;
 	}
+
+	.grid{
+		flex-wrap: wrap;
+		width: 100%;
+		margin: 0 auto;
+		padding: 0;
+	}
+
+	.services{
+		width: 75%;
+		padding: 40px;
+		margin: 0 auto;
+	}
+
+	img.services-header-img{
+		display:none;
+	}
+
+	.box {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		margin: 0 auto;
+		padding: 10px;
+	}
+	.box-item{
+		
+		margin: 0 auto;
+		padding: 25px;
+		width:75%;
+	}
+
+	button{
+		margin: 0 auto;
+		text-align: center;
+		padding: 10px;
+		width: 26%;
+	}
+
+	.list{
+		padding: 20px;
+		margin: 0 auto;
+		width: 75%;
+	}
+	img.services-info-img{
+		display:none;
+	}
 }
 
 @media(max-width:500px) {
@@ -471,4 +518,19 @@ ul {
 		width: 100%;
 		margin-bottom:15px;
 	}
+
+	.grid{
+		flex-wrap: wrap;
+		width: 100%;
+	}
+
+	.box {
+		width: 100%;
+		margin: 0 auto;
+		padding: 10px;
+	}
+	.box-item{
+		width:75%;
+	}
+
 }
