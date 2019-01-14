@@ -130,7 +130,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .container {
-  width: 880px;
+  width: 100%;
   /* TB LR */
   margin: 0 auto;
 }
@@ -140,12 +140,16 @@ header{
 	display:flex;
 }
 header nav {
-  width: 691px;
+	display:flex;
+	width: 100%;
   margin-top: 35px;
 }
 
 header nav a {
-  margin-right: 65px;
+	width:100%;
+	padding: 10px;
+	/* margin-right:65px; */
+	justify-content:space-around;
   font-size: 14px;
   color: gray;
   text-decoration: none;
@@ -171,10 +175,15 @@ header .logo {
 
 .cta{
 	display:flex;
+	width:100%;
+	justify-content: space-around;
+	margin-bottom: 25px;
+	border-bottom: 1px solid black;
+	padding-bottom: 15px;
 }
 
 .cta .cta-text {
-  vertical-align: top;
+  /* vertical-align: top; */
   font-size: 77px;
   margin-top: 120px;
   text-align: center;
@@ -183,7 +192,7 @@ header .logo {
 
 .cta .cta-text button {
   background: white;
-  vertical-align: top;
+  /* vertical-align: top; */
   margin-top: 6px;
   padding: 8px 44px;
   font-size: 17px;
@@ -197,17 +206,20 @@ header .logo {
 }
 
 .cta img {
+	/* width: 40%; */
   margin-top: 69px;
 }
 
-.main-content {
-  border-top: 1px solid black
+/* .main-content {
+  border-bottom: 1px solid black
   margin-top: 76px;
-  padding-top: 39px;
-}
+	padding-top: 39px;
+	width: 100%;
+} */
 
 .top-content{
 	display:flex;
+	width:100%;
 }
 
 .main-content .top-content {
@@ -215,7 +227,7 @@ header .logo {
 }
 
 .main-content .top-content .text-content {
-  width: 410px;
+  width: 100%;
   margin-right: 34px;
 }
 
@@ -224,12 +236,14 @@ header .logo {
 }
 
 .main-content .middle-img {
-  margin-top: 45px;
+	margin-top: 45px;
+	width: 100%;
 }
 
 .main-content .bottom-content {
   margin-top: 37px;
-  padding: 0 10px;
+	padding: 0 10px;
+	width: 100%;
 }
 
 .bottom-content{
@@ -237,7 +251,7 @@ header .logo {
 }
 
 .main-content .bottom-content .text-content {
-  width: 277px;
+  width: 100%;
   margin-right: 12px;
 }
 
@@ -386,21 +400,24 @@ ul {
 	}
 
 	header {
-		display: block;
-	
+		/* display: block; */
+	flex-flow: column-reverse;
 	}
 
 	header nav {
 		margin: 0 auto;
 	}
 
+
 	.cta .cta-text{
 		margin: 0 auto;
 		margin-top: 35px;
 	}
+
 	header .logo {
-		flex-wrap:wrap;
-	   
+			width: 25%;
+			margin: 0 auto;
+			margin-bottom: 25px;
 	}
 	.cta img{
 		display:none;
@@ -415,5 +432,43 @@ ul {
 @media(max-width:500px) {
 	.container{	
 		background: orange;
+	}
+
+	header nav{
+		flex-wrap:wrap;
+		width: 100%;
+		text-align:center;
+		border-bottom: 1px solid gray;
+	}
+
+	header nav a{
+		width: 100%;
+		border-top: 1px solid gray;
+	}
+
+	header nav a:hover{
+		background: pink;
+	}
+
+	header .logo {
+		width: 35%;
+		margin: 0 auto;
+		margin-bottom: 5px;
+}
+
+	.main-content .top-content{
+		flex-wrap:wrap;
+	}
+	.main-content .top-content .text-content{
+		width: 100%;
+		margin-bottom:15px;
+	}
+
+	.main-content .bottom-content{
+		flex-wrap:wrap;
+	}
+	.main-content .bottom-content .text-content{
+		width: 100%;
+		margin-bottom:15px;
 	}
 }
